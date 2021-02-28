@@ -1,0 +1,23 @@
+{
+  "name": "NewBoard",
+  "version": "1.0.3",
+  "manifest_version": 2,
+  "description": "The SuperRare chrome extension 💎",
+  "icons": {
+    "16": "sr-16.png",
+    "48": "sr-48.png",
+    "128": "sr-128.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "sr-16.png",
+      "48": "sr-48.png",
+      "128": "sr-128.png"
+    },
+    "default_title": "NewBoard"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
