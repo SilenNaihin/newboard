@@ -1,8 +1,8 @@
 {
   "name": "NewBoard",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "manifest_version": 2,
-  "description": "The SuperRare chrome extension 💎",
+  "description": "Public whiteboards.",
   "icons": {
     "16": "sr-16.png",
     "48": "sr-48.png",

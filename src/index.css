@@ -1,4 +1,9 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screen;
+
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,9 +15,28 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+#root{
+  width:100%;
+  height: 100%;
+}
+.board {
+  cursor: crosshair;
+  margin-bottom: 1%;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind screen;
+.controls .fa-icon {
+  cursor: pointer;
+  font-size: 3rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 30%;
+  box-shadow: 0 0 6px black;
+  z-index: 2;
+  color: grey;
+}
+
+.toolbar{
+  margin-top: 2.5%;
+}
