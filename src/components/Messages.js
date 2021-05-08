@@ -46,22 +46,25 @@ function Messages(props) {
             />
           ))}
         </div>
-        <div className="mt-2 mr-auto">
+        <div className="mt-2 ml-1 mr-auto">
           {addAnnouncement ? (
-            <button onClick={addCard}>
-              Add <b className="text-green-400 shadow px-1 h-auto">+</b>
+            <button
+              className="text-green-400 shadow px-1 h-auto"
+              onClick={addCard}
+            >
+              Add +
             </button>
           ) : (
             <>
               <div className="flex">
                 <input
-                  className="border-b border-gray w-3/5"
+                  className="border-b border-gray w-4/5"
                   onKeyPress={announcementEnter}
                   placeholder="Type here..."
                   value={newAnnouncement}
                   onChange={(e) => setNewAnnouncement(e.target.value)}
                 />
-                <button className="ml-2" onClick={announcementSend}>
+                <button className="ml-3" onClick={announcementSend}>
                   <img alt="checkmark" src={checkmark} className="h-6 w-6" />
                 </button>
               </div>

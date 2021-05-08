@@ -32,7 +32,6 @@ code {
   margin: 0.5rem;
   padding: 0.5rem;
   border-radius: 30%;
-  box-shadow: 0 0 6px black;
   z-index: 2;
   color: grey;
 }

@@ -3,6 +3,7 @@ import "./index.css";
 import Board from "./components/Board";
 import Messages from "./components/Messages";
 import Toolbar from "./components/Toolbar";
+import { useForceUpdate } from './hooks/useForceUpdate'
 
 function App() {
   const canvasRef = React.useRef(null);
@@ -12,6 +13,12 @@ function App() {
   const [canvasOffset, setCanvasOffset] = useState({ x: 0, y: 0 });
   const parentRef = React.useRef(null);
   const [color, setColor] = useState("#000000");
+
+  const forceUpdate = useForceUpdate();
+
+  function forceComponentUpdate() {
+    forceUpdate();
+  }
 
   useEffect(() => {
     let canv = canvasRef.current;
@@ -64,13 +71,17 @@ function App() {
           <Messages />
         </div>
         <div className="h-screen w-screen bg-yellow-100">
-          <Toolbar handleColor={handleColor} />
+          <Toolbar
+            handleColor={handleColor}
+            forceComponentUpdate={forceComponentUpdate}
+          />
           <Board
             parentRef={parentRef}
             canvasRef={canvasRef}
             handleMouseDown={handleMouseDown}
             handleMouseUp={handleMouseUp}
             handleMouseMove={handleMouseMove}
+            forceComponentUpdate={forceComponentUpdate}
           />
         </div>
       </div>

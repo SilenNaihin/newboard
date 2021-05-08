@@ -22,7 +22,7 @@ function Color(props) {
       }
 
     return (
-      <div className="color">
+      <div>
         <FontAwesomeIcon
           onClick={handleClick}
           title="choose color"
@@ -30,7 +30,7 @@ function Color(props) {
           icon={faPalette}
         />
         {displayed ? (
-            <div className="absolute z-10">
+          <div className="absolute z-10">
             <div className="fixed inset-0" onClick={handleClose}/>
             <ChromePicker color={color} onChange={handleChange}/>
           </div>

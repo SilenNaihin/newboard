@@ -1,6 +1,7 @@
 import '../index.css';
 
 function Board(props) {
+  
 
   return (
     <>
